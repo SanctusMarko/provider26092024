@@ -1,6 +1,6 @@
 // lib/data/cart_provider.dart
 import 'package:flutter/material.dart';
-import '../domain/product.dart';
+import '../domain/product.dart'; // Import für das Produkt-Modell
 
 // CartProvider Klasse, die den Zustand des Warenkorbs verwaltet
 class CartProvider with ChangeNotifier {
@@ -17,7 +17,7 @@ class CartProvider with ChangeNotifier {
       if (_cartItems.containsKey(product)) {
         _cartItems[product] = _cartItems[product]! + 1;
       } else {
-        // Wenn das produkt nicht im warenkorb ist, füge es mit einer Menge von 1 hinzu
+        // Wenn das Produkt nicht im Warenkorb ist, füge es mit einer Menge von 1 hinzu
         _cartItems[product] = 1;
       }
       // Verringere die Verfügbarkeit des Produkts
@@ -45,7 +45,7 @@ class CartProvider with ChangeNotifier {
   // Methode, um den Gesamtpreis des Warenkorbs zu berechnen
   double get totalPrice {
     double total = 0.0;
-    // Schleife über alle produkte im warenkorb und summiere die Preise. Preis * Menge
+    // Schleife über alle Produkte im Warenkorb und summiere die Preise. Preis * Menge
     _cartItems.forEach((product, quantity) {
       total += product.price * quantity;
     });

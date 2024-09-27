@@ -35,7 +35,7 @@ class ProductOverviewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Produkte"), // text in der AppBar
+        title: const Text("Produkte"), // Text in der AppBar
         actions: [
           // Schaltfläche für den Warenkorb oben rechts
           IconButton(
@@ -47,7 +47,7 @@ class ProductOverviewScreen extends StatelessWidget {
           ),
         ],
       ),
-      // Hauptteil des Bildschirms eine Liste von Produkten
+      // Hauptteil des Bildschirms: eine Liste von Produkten
       body: ListView.builder(
         itemCount: products.length, // Anzahl der Produkte in der Liste
         itemBuilder: (context, index) {
